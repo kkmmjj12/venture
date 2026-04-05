@@ -36,13 +36,13 @@ class WevityCrawler(BaseCrawler):
                         continue
                     title = title_el.get_text(strip=True)
 
-                    # 링크
+                    # 링크 — 개별 공모전 URL만 사용 (헤더행 스킵)
                     link_el = item.select_one("a[href]")
                     href = link_el["href"] if link_el else ""
-                    if href and not href.startswith("http"):
-                        href = BASE_URL + href
                     if not href:
-                        href = LIST_URL
+                        continue   # href 없으면 헤더행, 스킵
+                    if not href.startswith("http"):
+                        href = BASE_URL + href
 
                     # 주최기관
                     org_el = item.select_one(".organ") or item.select_one(".host") or item.select_one("span.company")
