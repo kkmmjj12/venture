@@ -29,16 +29,13 @@ jobs:
       - name: Restore DB cache (중복 방지용)
         uses: actions/cache@v4
         with:
-          path: contests.db
-          key: contests-db-${{ github.run_id }}
+          path: competitions.db
+          key: competitions-db-${{ github.run_id }}
           restore-keys: |
-            contests-db-
+            competitions-db-
 
       - name: Run crawler
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python main.py --now
+        run: python -c "from backend.crawler_runner import run_all_crawlers; run_all_crawlers()"
 
       - name: Export to JSON (GitHub Pages용)
         run: python export_json.py

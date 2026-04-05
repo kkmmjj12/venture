@@ -1,271 +1,240 @@
-const API = "";  // 같은 서버에서 서빙
+const API = "";   // 같은 FastAPI 서버에서 서빙
 
-// 상태
-let state = {
-  category: "전체",
-  sort: "latest",
-  source: null,
-  search: "",
-  items: [],
-  total: 0,
-  loading: false,
-};
-
-const GRADIENTS = [
-  "thumb-gradient-1","thumb-gradient-2","thumb-gradient-3","thumb-gradient-4",
-  "thumb-gradient-5","thumb-gradient-6","thumb-gradient-7","thumb-gradient-8",
-];
 const CAT_ICONS = {
   "AI/머신러닝": "🤖", "빅데이터": "📊", "데이터": "🗃️",
-  "앱개발": "📱", "웹개발": "🌐", "IoT/임베디드": "🔌",
-  "게임/VR": "🎮", "보안/해킹": "🔒", "블록체인": "⛓️",
-  "UI/UX": "🎨", "기타IT": "💻", "전체": "🏆",
-};
-const SOURCE_LABEL = {
-  linkareer: "링커리어", wevity: "위비티",
-  thinkgood: "씽굿", gonmofair: "공모전박람회",
+  "앱개발": "📱",       "웹개발": "🌐",   "IoT/임베디드": "🔌",
+  "게임/VR": "🎮",      "보안/해킹": "🔒", "블록체인": "⛓️",
+  "UI/UX": "🎨",        "기타IT": "💻",    "전체": "🔍",
 };
 
-// ── 초기화 ──
+const SOURCE_LABEL = {
+  linkareer: "링커리어",
+  wevity:    "위비티",
+  thinkgood: "씽굿",
+  gonmofair: "공모전박람회",
+  campuspick:"캠퍼스픽",
+};
+
+let state = {
+  category: "전체",
+  sort:     "latest",
+  source:   null,
+  search:   "",
+  total:    0,
+  loading:  false,
+};
+
+// ── 초기화 ──────────────────────────────────────
 document.addEventListener("DOMContentLoaded", async () => {
-  await loadCategories();
-  await loadSources();
+  await Promise.all([loadCategories(), loadSources(), loadStats()]);
   await fetchCompetitions();
-  loadStats();
-  bindEvents();
+
+  // 검색 입력 이벤트
+  document.getElementById("searchInput").addEventListener("input", e => {
+    state.search = e.target.value.trim();
+    fetchCompetitions();
+  });
 });
 
-function bindEvents() {
-  document.getElementById("searchInput").addEventListener("keydown", e => {
-    if (e.key === "Enter") doSearch();
-  });
-  document.getElementById("searchBtn").addEventListener("click", doSearch);
+// ── 통계 ─────────────────────────────────────────
+async function loadStats() {
+  try {
+    const res  = await fetch(`${API}/api/stats`);
+    const data = await res.json();
+    document.getElementById("statTotal").textContent   = data.total    ?? "—";
+    document.getElementById("statClosing").textContent = data.closing_soon ?? "—";
+  } catch (e) { /* 실패 시 무시 */ }
 }
 
-// ── 검색 ──
-function doSearch() {
-  state.search = document.getElementById("searchInput").value.trim();
-  fetchCompetitions();
-}
-
-// ── 카테고리 로드 ──
+// ── 카테고리 탭 ──────────────────────────────────
 async function loadCategories() {
   try {
-    const res = await fetch(`${API}/api/categories`);
+    const res  = await fetch(`${API}/api/categories`);
     const cats = await res.json();
-    const container = document.getElementById("categoryTabs");
-    container.innerHTML = cats.map(c => `
-      <button class="cat-tab ${c.name === state.category ? "active" : ""}"
-        onclick="selectCategory('${c.name}')">
-        ${CAT_ICONS[c.name] || "📌"} ${c.name}
-        <span class="count">${c.count}</span>
-      </button>
-    `).join("");
+    const bar  = document.getElementById("catBar");
+
+    bar.innerHTML = cats.map(c => {
+      const icon   = CAT_ICONS[c.name] || "📌";
+      const active = c.name === state.category ? "active" : "";
+      return `<button class="cat-btn ${active}" data-cat="${escHtml(c.name)}" onclick="selectCat(this)">
+        ${icon} ${escHtml(c.name)}
+        <span class="cnt">${c.count}</span>
+      </button>`;
+    }).join("");
   } catch (e) {
     console.error("카테고리 로드 실패:", e);
   }
 }
 
-// ── 출처 필터 로드 ──
+// ── 출처 필터 ─────────────────────────────────────
 async function loadSources() {
   try {
-    const res = await fetch(`${API}/api/sources`);
+    const res     = await fetch(`${API}/api/sources`);
     const sources = await res.json();
-    const container = document.getElementById("sourceFilters");
-    container.innerHTML = sources.map(s => `
-      <button class="source-chip" data-src="${s.id}"
-        onclick="selectSource('${s.id}')">
-        ${s.name} <small>(${s.count})</small>
+    const row     = document.getElementById("sourceRow");
+
+    row.innerHTML = sources.map(s => `
+      <button class="src-chip" data-src="${escHtml(s.id)}" onclick="selectSource(this)">
+        ${escHtml(s.name)} <small>(${s.count})</small>
       </button>
     `).join("");
-  } catch (e) {}
+  } catch (e) { /* 무시 */ }
 }
 
-// ── 통계 ──
-async function loadStats() {
-  try {
-    const res = await fetch(`${API}/api/stats`);
-    const data = await res.json();
-    document.getElementById("statTotal").textContent = data.total;
-    document.getElementById("statClosing").textContent = data.closing_soon;
-  } catch (e) {}
-}
-
-// ── 공모전 목록 로드 ──
+// ── 공모전 목록 ───────────────────────────────────
 async function fetchCompetitions() {
   if (state.loading) return;
   state.loading = true;
   showLoading();
 
-  const params = new URLSearchParams({
-    sort: state.sort,
-    limit: 60,
-    offset: 0,
-  });
+  const params = new URLSearchParams({ sort: state.sort, limit: 80, offset: 0 });
   if (state.category && state.category !== "전체") params.set("category", state.category);
-  if (state.source) params.set("source", state.source);
-  if (state.search) params.set("search", state.search);
+  if (state.source)  params.set("source", state.source);
+  if (state.search)  params.set("search", state.search);
 
   try {
-    const res = await fetch(`${API}/api/competitions?${params}`);
+    const res  = await fetch(`${API}/api/competitions?${params}`);
     const data = await res.json();
-    state.items = data.items;
     state.total = data.total;
-    renderGrid();
-    updateResultCount();
+    renderList(data.items);
+    document.getElementById("resultCount").textContent = data.total;
   } catch (e) {
-    showEmpty("데이터를 불러오지 못했습니다. 서버를 확인해주세요.");
+    showEmpty("데이터를 불러오지 못했습니다. 서버가 실행 중인지 확인하세요.");
   } finally {
     state.loading = false;
   }
 }
 
-// ── 카테고리 선택 ──
-function selectCategory(cat) {
-  state.category = cat;
-  document.querySelectorAll(".cat-tab").forEach(el => {
-    el.classList.toggle("active", el.textContent.includes(cat));
-  });
-  fetchCompetitions();
-}
+// ── 리스트 렌더링 ─────────────────────────────────
+function renderList(items) {
+  const wrap = document.getElementById("listWrap");
 
-// ── 출처 선택 ──
-function selectSource(srcId) {
-  if (state.source === srcId) {
-    state.source = null;
-  } else {
-    state.source = srcId;
-  }
-  document.querySelectorAll(".source-chip").forEach(el => {
-    el.classList.toggle("active", el.dataset.src === state.source);
-  });
-  fetchCompetitions();
-}
-
-// ── 정렬 ──
-function setSort(sort) {
-  state.sort = sort;
-  document.querySelectorAll(".sort-btn").forEach(el => {
-    el.classList.toggle("active", el.dataset.sort === sort);
-  });
-  fetchCompetitions();
-}
-
-// ── 카드 렌더링 ──
-function renderGrid() {
-  const grid = document.getElementById("grid");
-  if (!state.items.length) {
-    showEmpty("해당 조건의 공모전이 없습니다.");
+  if (!items || !items.length) {
+    showEmpty("조건에 맞는 공모전이 없습니다.");
     return;
   }
 
-  grid.innerHTML = state.items.map((item, idx) => {
-    const grad = GRADIENTS[idx % GRADIENTS.length];
-    const dday = getDdayBadge(item.days_left);
-    const srcBadge = getSourceBadge(item.source_site);
-    const catIcon = CAT_ICONS[item.category] || "💻";
+  wrap.innerHTML = items.map(item => {
+    const icon      = CAT_ICONS[item.category] || "💻";
+    const dday      = getDday(item.days_left);
+    const srcKey    = item.source_site || "linkareer";
+    const srcLabel  = SOURCE_LABEL[srcKey] || srcKey;
+    const expired   = item.days_left !== null && item.days_left < 0;
     const thumbHtml = item.thumbnail
-      ? `<img src="${escHtml(item.thumbnail)}" alt="" onerror="this.style.display='none'; this.parentElement.classList.add('${grad}'); this.parentElement.querySelector('.card-thumb-placeholder').style.display='flex';">`
-      : "";
-    const orgText = item.organization ? `🏢 ${escHtml(item.organization)}` : "";
+      ? `<img src="${escHtml(item.thumbnail)}" alt="" onerror="this.style.display='none'; this.nextSibling.style.display='flex';">
+         <span style="display:none">${icon}</span>`
+      : icon;
     const deadlineText = item.deadline
-      ? `마감 <strong>${item.deadline}</strong>`
+      ? `${item.deadline.slice(5).replace("-", "/")} 마감`
       : "마감일 미정";
+    const orgText = item.organization ? `🏢 ${escHtml(item.organization)}` : "";
+    const isNew   = item.days_left !== null && item.days_left >= 0 && isRecentItem(item);
 
     return `
-    <a class="card" href="${escHtml(item.source_url)}" target="_blank" rel="noopener">
-      <div class="card-thumb ${item.thumbnail ? "" : grad}">
-        ${thumbHtml}
-        <span class="card-thumb-placeholder" style="display:${item.thumbnail ? "none" : "flex"}">${catIcon}</span>
-        ${dday}
-        ${srcBadge}
+    <a class="row-card${expired ? " expired" : ""}"
+       href="${escHtml(item.source_url || item.original_url || "#")}"
+       target="_blank" rel="noopener noreferrer">
+      <div class="row-icon">${thumbHtml}</div>
+      <div class="row-main">
+        <div class="row-top">
+          ${isNew ? '<span class="new-dot" title="최근 등록"></span>' : ""}
+          <span class="row-title">${escHtml(item.title)}</span>
+          <span class="row-cat">${escHtml(item.category || "기타IT")}</span>
+        </div>
+        <div class="row-org">${orgText}</div>
       </div>
-      <div class="card-body">
-        <div class="card-category">${catIcon} ${escHtml(item.category || "기타IT")}</div>
-        <div class="card-title">${escHtml(item.title)}</div>
-        <div class="card-org">${orgText}</div>
-        <div class="card-footer">
-          <div class="deadline-info">${deadlineText}</div>
-          <span class="btn-detail">자세히 보기 →</span>
+      <div class="row-meta">
+        <span class="src-badge badge-${escHtml(srcKey)}">${escHtml(srcLabel)}</span>
+        <div class="deadline-wrap">
+          <div class="deadline-date">${deadlineText}</div>
+          <div class="dday ${dday.cls}">${dday.text}</div>
         </div>
       </div>
     </a>`;
   }).join("");
 }
 
-function getDdayBadge(daysLeft) {
-  if (daysLeft === null || daysLeft === undefined) return `<span class="dday-badge dday-gray">마감일미정</span>`;
-  if (daysLeft < 0) return `<span class="dday-badge dday-gray">종료</span>`;
-  if (daysLeft === 0) return `<span class="dday-badge dday-red">오늘마감!</span>`;
-  if (daysLeft <= 3) return `<span class="dday-badge dday-red">D-${daysLeft}</span>`;
-  if (daysLeft <= 7) return `<span class="dday-badge dday-orange">D-${daysLeft}</span>`;
-  if (daysLeft <= 14) return `<span class="dday-badge dday-yellow">D-${daysLeft}</span>`;
-  return `<span class="dday-badge dday-green">D-${daysLeft}</span>`;
+// ── D-day 계산 ────────────────────────────────────
+function getDday(daysLeft) {
+  if (daysLeft === null || daysLeft === undefined)
+    return { text: "미정",        cls: "dday-gray" };
+  if (daysLeft < 0)
+    return { text: "마감",        cls: "dday-gray" };
+  if (daysLeft === 0)
+    return { text: "오늘 마감!",  cls: "dday-red"  };
+  if (daysLeft <= 3)
+    return { text: `D-${daysLeft}`, cls: "dday-red"    };
+  if (daysLeft <= 7)
+    return { text: `D-${daysLeft}`, cls: "dday-yellow" };
+  return   { text: `D-${daysLeft}`, cls: "dday-green"  };
 }
 
-function getSourceBadge(source) {
-  const label = SOURCE_LABEL[source] || source;
-  return `<span class="source-badge badge-${source || "linkareer"}">${label}</span>`;
+// 최근 등록 여부 (crawled_at 기반으로 3일 이내인 항목 — 실제론 서버가 판단)
+function isRecentItem(item) {
+  if (!item.crawled_at) return false;
+  const diff = (Date.now() - new Date(item.crawled_at).getTime()) / 86400000;
+  return diff <= 3;
 }
 
-function updateResultCount() {
-  const el = document.getElementById("resultCount");
-  if (el) el.innerHTML = `총 <strong>${state.total}</strong>개의 공모전`;
+// ── 카테고리 선택 ─────────────────────────────────
+function selectCat(btn) {
+  state.category = btn.dataset.cat;
+  document.querySelectorAll(".cat-btn").forEach(b => b.classList.remove("active"));
+  btn.classList.add("active");
+  fetchCompetitions();
 }
 
-// ── 수동 새로고침 ──
+// ── 출처 선택 ─────────────────────────────────────
+function selectSource(btn) {
+  const id = btn.dataset.src;
+  if (state.source === id) {
+    state.source = null;
+    btn.classList.remove("active");
+  } else {
+    state.source = id;
+    document.querySelectorAll(".src-chip").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+  }
+  fetchCompetitions();
+}
+
+// ── 정렬 ─────────────────────────────────────────
+function setSort(sort, btn) {
+  state.sort = sort;
+  document.querySelectorAll(".sort-btn").forEach(b => b.classList.remove("active"));
+  btn.classList.add("active");
+  fetchCompetitions();
+}
+
+// ── 수동 갱신 (크롤링 트리거) ─────────────────────
 async function refreshData() {
   try {
-    const res = await fetch(`${API}/api/refresh`, { method: "POST" });
+    const res  = await fetch(`${API}/api/refresh`, { method: "POST" });
     const data = await res.json();
-    showToast(data.message || "크롤링을 시작했습니다.");
-    setTimeout(() => {
+    showToast(data.message || "크롤링을 시작했습니다. 잠시 후 새로고침 해주세요.");
+    setTimeout(async () => {
+      await Promise.all([loadCategories(), loadSources(), loadStats()]);
       fetchCompetitions();
-      loadCategories();
-      loadSources();
-      loadStats();
-    }, 4000);
+    }, 5000);
   } catch (e) {
-    showToast("새로고침에 실패했습니다.");
+    showToast("서버 연결에 실패했습니다.");
   }
 }
 
-// ── Discord 테스트 ──
-async function discordTest() {
-  try {
-    const res = await fetch(`${API}/api/discord/test`, { method: "POST" });
-    const data = await res.json();
-    showToast(data.message || data.error || "Discord 테스트 완료");
-  } catch (e) {
-    showToast("Discord 연결 테스트 실패");
-  }
-}
-
-// ── Discord 수동 알림 ──
-async function discordNotify() {
-  try {
-    const res = await fetch(`${API}/api/discord/notify`, { method: "POST" });
-    const data = await res.json();
-    showToast(data.message || data.error || "Discord 알림 전송 완료");
-  } catch (e) {
-    showToast("Discord 알림 전송 실패");
-  }
-}
-
-// ── 유틸 ──
+// ── UI 유틸 ──────────────────────────────────────
 function showLoading() {
-  document.getElementById("grid").innerHTML = `
-    <div class="loading" style="grid-column:1/-1">
+  document.getElementById("listWrap").innerHTML = `
+    <div class="loading">
       <div class="spinner"></div>
-      공모전 정보를 불러오는 중...
+      <p>공모전 정보를 불러오는 중...</p>
     </div>`;
 }
 
 function showEmpty(msg) {
-  document.getElementById("grid").innerHTML = `
-    <div class="empty" style="grid-column:1/-1">
+  document.getElementById("listWrap").innerHTML = `
+    <div class="empty">
       <div class="empty-icon">🔍</div>
-      <div>${msg}</div>
+      <p>${msg}</p>
     </div>`;
 }
 
