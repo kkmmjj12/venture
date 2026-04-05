@@ -230,70 +230,64 @@
 </footer>
 
 <script>
-const API = "https://venture-ux2u.onrender.com";
-const SOURCE_LABEL = { linkareer:"링커리어", wevity:"위비티", thinkgood:"씽굿", campuspick:"캠퍼스픽", gonmofair:"공모전박람회" };
 const SOURCE_CLASS = { linkareer:"source-linkareer", wevity:"source-wevity", thinkgood:"source-thinkgood", campuspick:"source-campuspick", gonmofair:"source-gonmofair" };
 const CAT_ICON = {
   "AI/머신러닝":"🤖","빅데이터":"📊","데이터":"🗃️","앱개발":"📱","웹개발":"🌐",
   "IoT/임베디드":"🔌","게임/VR":"🎮","보안/해킹":"🔒","블록체인":"⛓️","UI/UX":"🎨","기타IT":"💻"
 };
 
-let state = { cat: "전체", sort: "latest", source: null, search: "" };
+let allData = [];
+let state = { cat: "전체", sort: "deadline", source: null, search: "" };
 
-// ── 초기화 ──
 document.addEventListener("DOMContentLoaded", () => {
-  loadAll();
-  document.getElementById("search").addEventListener("input", e => {
-    state.search = e.target.value;
-    fetchList();
-  });
+  load();
+  document.getElementById("search").addEventListener("input", e => { state.search = e.target.value; render(); });
   document.querySelectorAll("[data-cat]").forEach(btn => {
     btn.addEventListener("click", () => {
       document.querySelectorAll("[data-cat]").forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
       state.cat = btn.dataset.cat;
-      fetchList();
+      render();
     });
   });
 });
 
-async function loadAll() {
-  await fetchList();
-  loadStats();
-}
-
-// ── 공모전 목록 ──
-async function fetchList() {
+async function load() {
   const grid = document.getElementById("grid");
   grid.innerHTML = '<div class="empty"><div class="spinner"></div><p>불러오는 중...</p></div>';
-
-  const p = new URLSearchParams({ sort: state.sort, limit: 60 });
-  if (state.cat && state.cat !== "전체") p.set("category", state.cat);
-  if (state.source) p.set("source", state.source);
-  if (state.search) p.set("search", state.search);
-
   try {
-    const res = await fetch(`${API}/api/competitions?${p}`);
+    const res = await fetch("data.json?t=" + Date.now());
     const data = await res.json();
-    renderGrid(data.items || []);
-    document.getElementById("updated").textContent = `총 ${data.total}개`;
+    allData = data.contests || [];
+    document.getElementById("updated").textContent = "업데이트: " + (data.updated || "-");
+    document.getElementById("total-count").textContent = allData.length;
+    const closing = allData.filter(c => c.days_left !== null && c.days_left >= 0 && c.days_left <= 7).length;
+    document.getElementById("closing-count").textContent = closing;
+    render();
   } catch(e) {
-    grid.innerHTML = '<div class="empty"><div style="font-size:40px">📭</div><p>서버에 연결할 수 없습니다.<br>잠시 후 다시 시도해주세요.</p></div>';
+    grid.innerHTML = '<div class="empty"><div style="font-size:40px">📭</div><p>데이터를 불러올 수 없습니다.<br>GitHub Actions가 아직 실행되지 않았을 수 있습니다.</p></div>';
   }
 }
 
-// ── 통계 ──
-async function loadStats() {
-  try {
-    const res = await fetch(`${API}/api/stats`);
-    const d = await res.json();
-    document.getElementById("total-count").textContent = d.total;
-    document.getElementById("closing-count").textContent = d.closing_soon;
-  } catch(e) {}
-}
+function render() {
+  const q = state.search.toLowerCase();
+  let items = allData.filter(c => {
+    const matchCat = state.cat === "전체" || c.category === state.cat;
+    const matchSrc = !state.source || c.source_site === state.source;
+    const matchQ = !q || c.title.toLowerCase().includes(q) || (c.organization||"").toLowerCase().includes(q);
+    return matchCat && matchSrc && matchQ;
+  });
 
-// ── 카드 렌더링 ──
-function renderGrid(items) {
+  if (state.sort === "deadline") {
+    items = [...items].sort((a, b) => {
+      if (a.days_left === null) return 1;
+      if (b.days_left === null) return -1;
+      return a.days_left - b.days_left;
+    });
+  }
+
+  document.getElementById("updated").textContent = `총 ${items.length}개`;
+
   const grid = document.getElementById("grid");
   if (!items.length) {
     grid.innerHTML = '<div class="empty"><div style="font-size:40px">🔍</div><p>검색 결과가 없습니다.</p></div>';
@@ -302,7 +296,7 @@ function renderGrid(items) {
   grid.innerHTML = items.map(c => {
     const icon = CAT_ICON[c.category] || "💻";
     const srcClass = SOURCE_CLASS[c.source_site] || "";
-    const srcLabel = SOURCE_LABEL[c.source_site] || c.source_site;
+    const srcLabel = c.source_label || c.source_site;
     const dday = getDday(c.days_left);
     return `
     <div class="card cs">
@@ -316,7 +310,7 @@ function renderGrid(items) {
         ${dday}
         <span class="tag ${srcClass}" style="margin-left:auto">${srcLabel}</span>
       </div>
-      ${(c.original_url || c.source_url) ? `<a class="card-link" href="${esc(c.original_url || c.source_url)}" target="_blank" rel="noopener">바로가기 →</a>` : ""}
+      ${c.url ? `<a class="card-link" href="${esc(c.url)}" target="_blank" rel="noopener">바로가기 →</a>` : ""}
     </div>`;
   }).join("");
 }
@@ -331,20 +325,18 @@ function getDday(days) {
   return `<span class="tag dday dday-green">D-${days}</span>`;
 }
 
-// ── 정렬 ──
 function setSort(sort) {
   state.sort = sort;
   document.querySelectorAll(".sort-btn").forEach(b => b.classList.toggle("active", b.dataset.sort === sort));
-  fetchList();
+  render();
 }
 
-// ── 출처 토글 ──
 function toggleSource(src) {
   state.source = state.source === src ? null : src;
   ["linkareer","wevity","thinkgood","campuspick","gonmofair"].forEach(s => {
     document.getElementById("src-" + s)?.classList.toggle("active", state.source === s);
   });
-  fetchList();
+  render();
 }
 
 function esc(s) {
