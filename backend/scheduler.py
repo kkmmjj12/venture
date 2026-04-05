@@ -47,23 +47,27 @@ def start_scheduler():
     notify_hour = int(os.getenv("DAILY_NOTIFY_HOUR", "9"))
     notify_minute = int(os.getenv("DAILY_NOTIFY_MINUTE", "0"))
 
-    _scheduler = BackgroundScheduler(timezone="Asia/Seoul")
+    try:
+        import zoneinfo
+        tz = zoneinfo.ZoneInfo("Asia/Seoul")
+    except Exception:
+        tz = "UTC"
+
+    _scheduler = BackgroundScheduler(timezone=tz)
 
     # 주기적 크롤링
     _scheduler.add_job(
         run_crawl_job,
         trigger=IntervalTrigger(hours=interval_hours),
         id="crawl_job",
-        name=f"정기 크롤링 ({interval_hours}시간마다)",
         replace_existing=True,
     )
 
     # 매일 Discord 알림
     _scheduler.add_job(
         run_discord_job,
-        trigger=CronTrigger(hour=notify_hour, minute=notify_minute, timezone="Asia/Seoul"),
+        trigger=CronTrigger(hour=notify_hour, minute=notify_minute),
         id="discord_job",
-        name=f"일일 Discord 알림 ({notify_hour:02d}:{notify_minute:02d})",
         replace_existing=True,
     )
 
