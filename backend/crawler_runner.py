@@ -54,19 +54,8 @@ def upsert_competition(db, data: dict) -> bool:
         return True  # inserted
 
 
-def seed_if_empty(db):
-    """DB가 비어있으면 샘플 데이터 삽입"""
-    count = db.query(Competition).count()
-    if count == 0:
-        from backend.seed_data import SAMPLE_COMPETITIONS
-        print("[시드] 샘플 데이터 삽입 중...")
-        for data in SAMPLE_COMPETITIONS:
-            comp = Competition(**{k: v for k, v in data.items()
-                                  if hasattr(Competition, k)})
-            comp.crawled_at = datetime.utcnow()
-            db.add(comp)
-        db.commit()
-        print(f"[시드] {len(SAMPLE_COMPETITIONS)}개 샘플 데이터 삽입 완료")
+def seed_if_empty(_db):
+    pass  # 실제 크롤링 데이터만 사용
 
 
 def run_all_crawlers():
