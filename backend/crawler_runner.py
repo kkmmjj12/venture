@@ -6,6 +6,8 @@ from backend.models import Competition
 from backend.crawlers.linkareer import LinkareerCrawler
 from backend.crawlers.wevity import WevityCrawler
 from backend.crawlers.thinkgood import ThinkgoodCrawler
+from backend.crawlers.campuspick import CampuspickCrawler
+from backend.crawlers.gonmofair import GonmofairCrawler
 from datetime import datetime
 
 
@@ -13,6 +15,8 @@ CRAWLERS = [
     LinkareerCrawler,
     WevityCrawler,
     ThinkgoodCrawler,
+    CampuspickCrawler,
+    GonmofairCrawler,
 ]
 
 

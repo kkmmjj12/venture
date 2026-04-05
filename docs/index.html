@@ -109,6 +109,8 @@
     .source-linkareer { color: #4dabf7; }
     .source-wevity { color: #69db7c; }
     .source-thinkgood { color: #ffa94d; }
+    .source-campuspick { color: #da77f2; }
+    .source-gonmofair { color: #ff8787; }
     .spinner {
       width: 36px; height: 36px;
       border: 3px solid var(--border);
@@ -184,7 +186,6 @@
     <span class="logo-icon">🚀</span>
     <div>
       <h1>Venture</h1>
-      <p>컴퓨터공학 재학생을 위한 공모전 알리미</p>
     </div>
   </div>
   <span class="updated" id="updated">업데이트 중...</span>
@@ -193,7 +194,7 @@
 <div class="stats">
   <div class="stat"><div class="num" id="total-count">-</div><div class="label">전체 공모전</div></div>
   <div class="stat"><div class="num" id="closing-count">-</div><div class="label">⏰ 마감 임박</div></div>
-  <div class="stat"><div class="num" id="source-count">3</div><div class="label">수집 사이트</div></div>
+  <div class="stat"><div class="num" id="source-count">5</div><div class="label">수집 사이트</div></div>
 </div>
 
 <div class="controls" id="cat-controls">
@@ -216,6 +217,8 @@
     <button class="filter-btn" id="src-linkareer" data-src="linkareer" onclick="toggleSource('linkareer')" style="font-size:11px;padding:5px 11px;color:#4dabf7;border-color:#4dabf7;">링커리어</button>
     <button class="filter-btn" id="src-wevity" data-src="wevity" onclick="toggleSource('wevity')" style="font-size:11px;padding:5px 11px;color:#69db7c;border-color:#69db7c;">위비티</button>
     <button class="filter-btn" id="src-thinkgood" data-src="thinkgood" onclick="toggleSource('thinkgood')" style="font-size:11px;padding:5px 11px;color:#ffa94d;border-color:#ffa94d;">씽굿</button>
+    <button class="filter-btn" id="src-campuspick" data-src="campuspick" onclick="toggleSource('campuspick')" style="font-size:11px;padding:5px 11px;color:#da77f2;border-color:#da77f2;">캠퍼스픽</button>
+    <button class="filter-btn" id="src-gonmofair" data-src="gonmofair" onclick="toggleSource('gonmofair')" style="font-size:11px;padding:5px 11px;color:#ff8787;border-color:#ff8787;">공모전박람회</button>
   </div>
   <input id="search" type="text" placeholder="🔍 공모전 검색..." />
 </div>
@@ -229,8 +232,8 @@
 
 <script>
 const API = "https://venture-ux2u.onrender.com";
-const SOURCE_LABEL = { linkareer:"링커리어", wevity:"위비티", thinkgood:"씽굿" };
-const SOURCE_CLASS = { linkareer:"source-linkareer", wevity:"source-wevity", thinkgood:"source-thinkgood" };
+const SOURCE_LABEL = { linkareer:"링커리어", wevity:"위비티", thinkgood:"씽굿", campuspick:"캠퍼스픽", gonmofair:"공모전박람회" };
+const SOURCE_CLASS = { linkareer:"source-linkareer", wevity:"source-wevity", thinkgood:"source-thinkgood", campuspick:"source-campuspick", gonmofair:"source-gonmofair" };
 const CAT_ICON = {
   "AI/머신러닝":"🤖","빅데이터":"📊","데이터":"🗃️","앱개발":"📱","웹개발":"🌐",
   "IoT/임베디드":"🔌","게임/VR":"🎮","보안/해킹":"🔒","블록체인":"⛓️","UI/UX":"🎨","기타IT":"💻"
@@ -314,7 +317,7 @@ function renderGrid(items) {
         ${dday}
         <span class="tag ${srcClass}" style="margin-left:auto">${srcLabel}</span>
       </div>
-      ${c.source_url ? `<a class="card-link" href="${esc(c.source_url)}" target="_blank" rel="noopener">바로가기 →</a>` : ""}
+      ${(c.original_url || c.source_url) ? `<a class="card-link" href="${esc(c.original_url || c.source_url)}" target="_blank" rel="noopener">바로가기 →</a>` : ""}
     </div>`;
   }).join("");
 }
@@ -339,7 +342,7 @@ function setSort(sort) {
 // ── 출처 토글 ──
 function toggleSource(src) {
   state.source = state.source === src ? null : src;
-  ["linkareer","wevity","thinkgood"].forEach(s => {
+  ["linkareer","wevity","thinkgood","campuspick","gonmofair"].forEach(s => {
     document.getElementById("src-" + s)?.classList.toggle("active", state.source === s);
   });
   fetchList();

@@ -19,6 +19,7 @@ SOURCE_DISPLAY = {
     "linkareer": "링커리어",
     "wevity": "위비티",
     "thinkgood": "씽굿",
+    "campuspick": "캠퍼스픽",
     "gonmofair": "공모전박람회",
 }
 
