@@ -2,6 +2,7 @@ import os
 from fastapi import FastAPI, Depends, Query, BackgroundTasks
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse, JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 from sqlalchemy import or_
 from typing import Optional, List
@@ -46,6 +47,13 @@ app = FastAPI(
     description="국내 IT 공모전 정보 수집 및 제공 API",
     version="1.0.0",
     lifespan=lifespan,
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 # ───── API 엔드포인트 ─────
