@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Venture — 공모전 알리미</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0f1117;
+      --surface: #1a1d27;
+      --border: #2a2d3a;
+      --accent: #6c63ff;
+      --accent2: #00d4aa;
+      --text: #e8eaf0;
+      --muted: #8b8fa8;
+      --cs: #6c63ff;
+      --other: #3a3d4a;
+    }
+    body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; min-height: 100vh; }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 24px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .logo { display: flex; align-items: center; gap: 12px; }
+    .logo-icon { font-size: 28px; }
+    .logo h1 { font-size: 22px; font-weight: 700; letter-spacing: -0.5px; }
+    .logo p { font-size: 12px; color: var(--muted); margin-top: 2px; }
+    .updated { font-size: 12px; color: var(--muted); }
+
+    .stats {
+      display: flex;
+      gap: 16px;
+      padding: 20px 32px;
+      flex-wrap: wrap;
+    }
+    .stat {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 20px;
+      min-width: 120px;
+    }
+    .stat .num { font-size: 26px; font-weight: 700; color: var(--accent2); }
+    .stat .label { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+    .controls {
+      padding: 0 32px 16px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .filter-btn {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      padding: 7px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 13px;
+      transition: all .15s;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      border-color: var(--accent);
+      color: var(--text);
+      background: rgba(108,99,255,.15);
+    }
+    #search {
+      margin-left: auto;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 7px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      outline: none;
+      width: 200px;
+      transition: border-color .15s;
+    }
+    #search:focus { border-color: var(--accent); }
+    #search::placeholder { color: var(--muted); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 16px;
+      padding: 0 32px 40px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px;
+      transition: border-color .15s, transform .15s;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .card:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .card.cs { border-left: 3px solid var(--cs); }
+
+    .card-top { display: flex; align-items: flex-start; gap: 10px; }
+    .badge {
+      font-size: 18px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .card-title { font-size: 14px; font-weight: 600; line-height: 1.4; }
+
+    .card-meta { display: flex; flex-wrap: wrap; gap: 6px; font-size: 12px; color: var(--muted); }
+    .tag {
+      background: var(--border);
+      border-radius: 6px;
+      padding: 3px 8px;
+    }
+    .tag.cs-tag { background: rgba(108,99,255,.2); color: #a09cf7; }
+    .deadline { color: #ff6b6b; }
+
+    .card-link {
+      margin-top: auto;
+      display: inline-block;
+      color: var(--accent2);
+      font-size: 12px;
+      text-decoration: none;
+    }
+    .card-link:hover { text-decoration: underline; }
+
+    .empty { text-align: center; padding: 80px 32px; color: var(--muted); grid-column: 1/-1; }
+    .empty p { font-size: 15px; margin-top: 8px; }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      color: var(--muted);
+      font-size: 12px;
+      border-top: 1px solid var(--border);
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <span class="logo-icon">🚀</span>
+    <div>
+      <h1>Venture</h1>
+      <p>컴퓨터공학 재학생을 위한 공모전 알리미</p>
+    </div>
+  </div>
+  <span class="updated" id="updated">업데이트 중...</span>
+</header>
+
+<div class="stats">
+  <div class="stat"><div class="num" id="total-count">-</div><div class="label">전체 공모전</div></div>
+  <div class="stat"><div class="num" id="cs-count">-</div><div class="label">💻 CS 관련</div></div>
+  <div class="stat"><div class="num" id="source-count">-</div><div class="label">수집 사이트</div></div>
+</div>
+
+<div class="controls">
+  <button class="filter-btn active" data-filter="all">전체</button>
+  <button class="filter-btn" data-filter="cs">💻 CS 관련</button>
+  <button class="filter-btn" data-filter="wevity">위비티</button>
+  <button class="filter-btn" data-filter="thinkcontest">씽굿</button>
+  <input id="search" type="text" placeholder="🔍 공모전 검색..." />
+</div>
+
+<div class="grid" id="grid"></div>
+
+<footer>
+  Venture · <a href="https://github.com/kkmmjj12/venture" target="_blank">GitHub</a> ·
+  매일 오전 9시 자동 업데이트
+</footer>
+
+<script>
+let allContests = [];
+let currentFilter = 'all';
+
+async function load() {
+  try {
+    const res = await fetch('data.json?t=' + Date.now());
+    const data = await res.json();
+    allContests = data.contests || [];
+    document.getElementById('updated').textContent =
+      '업데이트: ' + (data.updated || '-');
+    updateStats();
+    render();
+  } catch (e) {
+    document.getElementById('grid').innerHTML =
+      '<div class="empty"><div style="font-size:40px">📭</div><p>데이터를 불러올 수 없습니다.<br>GitHub Actions가 아직 실행되지 않았을 수 있습니다.</p></div>';
+  }
+}
+
+function updateStats() {
+  document.getElementById('total-count').textContent = allContests.length;
+  document.getElementById('cs-count').textContent = allContests.filter(c => c.is_cs).length;
+  const sources = new Set(allContests.map(c => c.source));
+  document.getElementById('source-count').textContent = sources.size;
+}
+
+function render() {
+  const q = document.getElementById('search').value.toLowerCase();
+  const filtered = allContests.filter(c => {
+    const matchFilter =
+      currentFilter === 'all' ? true :
+      currentFilter === 'cs' ? c.is_cs :
+      currentFilter === 'wevity' ? c.source.includes('wevity') :
+      currentFilter === 'thinkcontest' ? c.source.includes('thinkcontest') : true;
+    const matchSearch = !q ||
+      c.title.toLowerCase().includes(q) ||
+      (c.organizer || '').toLowerCase().includes(q);
+    return matchFilter && matchSearch;
+  });
+
+  const grid = document.getElementById('grid');
+  if (!filtered.length) {
+    grid.innerHTML = '<div class="empty"><div style="font-size:40px">🔍</div><p>검색 결과가 없습니다.</p></div>';
+    return;
+  }
+
+  grid.innerHTML = filtered.map(c => `
+    <div class="card ${c.is_cs ? 'cs' : ''}">
+      <div class="card-top">
+        <span class="badge">${c.is_cs ? '💻' : '📋'}</span>
+        <span class="card-title">${esc(c.title)}</span>
+      </div>
+      <div class="card-meta">
+        ${c.is_cs ? '<span class="tag cs-tag">CS 관련</span>' : ''}
+        ${c.category ? `<span class="tag">${esc(c.category)}</span>` : ''}
+        ${c.organizer ? `<span class="tag">${esc(c.organizer)}</span>` : ''}
+        ${c.deadline ? `<span class="tag deadline">⏰ ${esc(c.deadline)}</span>` : ''}
+      </div>
+      ${c.url ? `<a class="card-link" href="${esc(c.url)}" target="_blank" rel="noopener">바로가기 →</a>` : ''}
+    </div>
+  `).join('');
+}
+
+function esc(s) {
+  return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentFilter = btn.dataset.filter;
+    render();
+  });
+});
+document.getElementById('search').addEventListener('input', render);
+
+load();
+</script>
+</body>
+</html>
