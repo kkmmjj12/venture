@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Venture — 국내 IT 공모전 한눈에 보기</title>
+  <meta name="description" content="AI, 빅데이터, 앱개발, 웹개발 등 국내 IT 공모전을 한 곳에서! 링커리어, 위비티, 씽굿에서 수집한 최신 공모전 정보를 실시간으로 확인하세요." />
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header class="header">
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <div class="logo-icon">🚀</div>
+      <div class="logo-text">Ven<span>ture</span></div>
+    </a>
+    <div class="header-actions">
+      <button class="btn-header" onclick="refreshData()">🔄 데이터 갱신</button>
+    </div>
+  </div>
+</header>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <h1>국내 IT 공모전을<br /><span>한 곳에서</span> 찾아보세요</h1>
+  <p>링커리어 · 위비티 · 씽굿에서 수집한 최신 IT 공모전 정보</p>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="공모전 이름, 주최기관 검색..." />
+    <button id="searchBtn">🔍</button>
+  </div>
+
+  <div class="hero-stats">
+    <div class="stat-item">
+      <div class="stat-num" id="statTotal">-</div>
+      <div class="stat-label">전체 공모전</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num" id="statClosing">-</div>
+      <div class="stat-label">마감 임박 (7일 이내)</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">3</div>
+      <div class="stat-label">수집 사이트</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── MAIN ── -->
+<main class="main">
+
+  <!-- Discord 패널 -->
+  <div class="discord-panel">
+    <div>
+      <h3>🔔 Discord 일일 알림</h3>
+      <p>매일 오전 9시, 새 공모전과 마감 임박 정보를 Discord 채널로 받아보세요</p>
+    </div>
+    <div class="discord-actions">
+      <button class="btn-discord" onclick="discordTest()">연결 테스트</button>
+      <button class="btn-discord filled" onclick="discordNotify()">지금 알림 받기</button>
+    </div>
+  </div>
+
+  <!-- 카테고리 탭 -->
+  <div class="section-label">카테고리</div>
+  <div class="category-tabs" id="categoryTabs">
+    <!-- JS 로드 -->
+  </div>
+
+  <!-- 출처 필터 -->
+  <div class="section-label">출처 사이트</div>
+  <div class="source-filters" id="sourceFilters">
+    <!-- JS 로드 -->
+  </div>
+
+  <!-- 툴바 -->
+  <div class="toolbar">
+    <div class="result-count" id="resultCount">불러오는 중...</div>
+    <div class="sort-bar">
+      <button class="sort-btn active" data-sort="latest" onclick="setSort('latest')">최신순</button>
+      <button class="sort-btn" data-sort="deadline" onclick="setSort('deadline')">마감임박순</button>
+    </div>
+  </div>
+
+  <!-- 공모전 그리드 -->
+  <div class="grid" id="grid">
+    <div class="loading" style="grid-column:1/-1">
+      <div class="spinner"></div>
+      공모전 정보를 불러오는 중...
+    </div>
+  </div>
+
+</main>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <p>
+    데이터 출처:
+    <a href="https://linkareer.com/list/contest" target="_blank" rel="noopener">링커리어</a> ·
+    <a href="https://www.wevity.com" target="_blank" rel="noopener">위비티</a> ·
+    <a href="https://www.thinkgood.co.kr" target="_blank" rel="noopener">씽굿</a>
+  </p>
+  <p style="margin-top:8px;">Venture — 학생을 위한 IT 공모전 정보 서비스</p>
+</footer>
+
+<!-- 토스트 -->
+<div id="toast"></div>
+
+<script src="/static/js/app.js"></script>
+</body>
+</html>

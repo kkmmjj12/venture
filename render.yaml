@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: venture
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: DISCORD_WEBHOOK_URL
+        sync: false          # Render 대시보드에서 직접 입력
+      - key: DAILY_NOTIFY_HOUR
+        value: "9"
+      - key: DAILY_NOTIFY_MINUTE
+        value: "0"
+      - key: CRAWL_INTERVAL_HOURS
+        value: "6"
+      - key: PYTHON_VERSION
+        value: "3.11.0"
