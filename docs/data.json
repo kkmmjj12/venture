@@ -1,5 +1,5 @@
 {
-  "updated": "2026.09.26 03:17 UTC",
+  "updated": "2026.09.27 03:25 UTC",
   "total": 15,
   "contests": [
     {
@@ -133,22 +133,22 @@
       "days_left": null
     },
     {
-      "title": "2026 승강기산업 진흥&승강기 안전문화 확산 아이디어 공모전신규",
+      "title": "2026전국청소년평화통일랩경연대회신규",
+      "organization": "민주평통 전남지역회의",
+      "category": "기타IT",
+      "source_site": "wevity",
+      "source_label": "위비티",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111286",
+      "deadline": null,
+      "days_left": null
+    },
+    {
+      "title": "2026 승강기산업 진흥&승강기 안전문화 확산 아이디어 공모전",
       "organization": "(사)대한승강기협회",
       "category": "기타IT",
       "source_site": "wevity",
       "source_label": "위비티",
       "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111285",
-      "deadline": null,
-      "days_left": null
-    },
-    {
-      "title": "Pollo AI K-pop MV 챌린지",
-      "organization": "COCOSOFT TECHNOLOGY PTE. LTD.",
-      "category": "AI/머신러닝",
-      "source_site": "wevity",
-      "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111280",
       "deadline": null,
       "days_left": null
     }
