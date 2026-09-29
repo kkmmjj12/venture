@@ -1,7 +1,17 @@
 {
-  "updated": "2026.09.28 03:23 UTC",
+  "updated": "2026.09.29 03:59 UTC",
   "total": 15,
   "contests": [
+    {
+      "title": "LG 대국민 미소 사진 공모전 - 스마일 모먼트신규SPECIAL",
+      "organization": "LG",
+      "category": "기타IT",
+      "source_site": "wevity",
+      "source_label": "위비티",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111311",
+      "deadline": null,
+      "days_left": null
+    },
     {
       "title": "스파크업 : 모두의 에너지 (에너지 창업 경연대회)SPECIAL",
       "organization": "기후에너지환경부",
@@ -23,32 +33,12 @@
       "days_left": null
     },
     {
-      "title": "2026년 스포츠토토 숏폼 공모전SPECIAL",
-      "organization": "국민체육진흥공단",
-      "category": "기타IT",
-      "source_site": "wevity",
-      "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=110678",
-      "deadline": null,
-      "days_left": null
-    },
-    {
       "title": "[과학기술정보통신부] 제3회 미래융합인재 발굴 소프트웨어 챌린지SPECIALIDEA",
       "organization": "과학기술정보통신부",
       "category": "기타IT",
       "source_site": "wevity",
       "source_label": "위비티",
       "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=110675",
-      "deadline": null,
-      "days_left": null
-    },
-    {
-      "title": "[문화체육관광부×한국문화정보원] 문화데이터 활용 영상 제작 AI 챌린지SPECIAL",
-      "organization": "한국문화정보원",
-      "category": "AI/머신러닝",
-      "source_site": "wevity",
-      "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=110633",
       "deadline": null,
       "days_left": null
     },
@@ -69,6 +59,36 @@
       "source_site": "wevity",
       "source_label": "위비티",
       "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=110179",
+      "deadline": null,
+      "days_left": null
+    },
+    {
+      "title": "2026 디자인 크리에이션 챌린지(DCC) 3D프린팅 제품디자인 공모전SPECIAL",
+      "organization": "단국대-스트라타시스 첨단제조융합연구센터",
+      "category": "UI/UX",
+      "source_site": "wevity",
+      "source_label": "위비티",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=109516",
+      "deadline": null,
+      "days_left": null
+    },
+    {
+      "title": "DIDA 2026 대구국제디자인어워드 공모전SPECIAL",
+      "organization": "대구경북디자인산업협회",
+      "category": "UI/UX",
+      "source_site": "wevity",
+      "source_label": "위비티",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=109120",
+      "deadline": null,
+      "days_left": null
+    },
+    {
+      "title": "제38회 대한민국 실내건축대전SPECIAL",
+      "organization": "(사)한국실내건축가협회(KOSID), KCC글라스·홈씨씨",
+      "category": "기타IT",
+      "source_site": "wevity",
+      "source_label": "위비티",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=108562",
       "deadline": null,
       "days_left": null
     },
@@ -123,32 +143,12 @@
       "days_left": null
     },
     {
-      "title": "2026전국청소년평화통일랩경연대회",
-      "organization": "민주평통 전남지역회의",
+      "title": "[기후에너지환경부] 제13회 대학생 물환경 정책·기술 공모전신규",
+      "organization": "기후에너지환경부",
       "category": "기타IT",
       "source_site": "wevity",
       "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111286",
-      "deadline": null,
-      "days_left": null
-    },
-    {
-      "title": "2026 승강기산업 진흥&승강기 안전문화 확산 아이디어 공모전",
-      "organization": "(사)대한승강기협회",
-      "category": "기타IT",
-      "source_site": "wevity",
-      "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111285",
-      "deadline": null,
-      "days_left": null
-    },
-    {
-      "title": "제1회 지역 현안 해결 솔루션 챌린지",
-      "organization": "과학기술정보통신부",
-      "category": "기타IT",
-      "source_site": "wevity",
-      "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111283",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111329",
       "deadline": null,
       "days_left": null
     }
