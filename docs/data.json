@@ -1,9 +1,9 @@
 {
-  "updated": "2026.09.29 03:59 UTC",
+  "updated": "2026.09.30 03:46 UTC",
   "total": 15,
   "contests": [
     {
-      "title": "LG 대국민 미소 사진 공모전 - 스마일 모먼트신규SPECIAL",
+      "title": "LG 대국민 미소 사진 공모전 - 스마일 모먼트SPECIAL",
       "organization": "LG",
       "category": "기타IT",
       "source_site": "wevity",
@@ -29,6 +29,16 @@
       "source_site": "wevity",
       "source_label": "위비티",
       "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111114",
+      "deadline": null,
+      "days_left": null
+    },
+    {
+      "title": "2026년 스포츠토토 숏폼 공모전SPECIAL",
+      "organization": "국민체육진흥공단",
+      "category": "기타IT",
+      "source_site": "wevity",
+      "source_label": "위비티",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=110678",
       "deadline": null,
       "days_left": null
     },
@@ -69,16 +79,6 @@
       "source_site": "wevity",
       "source_label": "위비티",
       "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=109516",
-      "deadline": null,
-      "days_left": null
-    },
-    {
-      "title": "DIDA 2026 대구국제디자인어워드 공모전SPECIAL",
-      "organization": "대구경북디자인산업협회",
-      "category": "UI/UX",
-      "source_site": "wevity",
-      "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=109120",
       "deadline": null,
       "days_left": null
     },
@@ -143,12 +143,12 @@
       "days_left": null
     },
     {
-      "title": "[기후에너지환경부] 제13회 대학생 물환경 정책·기술 공모전신규",
-      "organization": "기후에너지환경부",
-      "category": "기타IT",
+      "title": "CREPET AWARDS 2026 반려용품 디자인 공모전신규",
+      "organization": "주식회사 에이아이아트",
+      "category": "게임/VR",
       "source_site": "wevity",
       "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111329",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111351",
       "deadline": null,
       "days_left": null
     }
