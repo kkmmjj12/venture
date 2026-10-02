@@ -1,9 +1,9 @@
 {
-  "updated": "2026.10.01 03:53 UTC",
+  "updated": "2026.10.02 03:51 UTC",
   "total": 15,
   "contests": [
     {
-      "title": "2026 한국외식산업연구원 외식경영스타 아이디어 공모전신규SPECIAL",
+      "title": "2026 한국외식산업연구원 외식경영스타 아이디어 공모전SPECIAL",
       "organization": "한국외식산업연구원",
       "category": "기타IT",
       "source_site": "wevity",
@@ -143,12 +143,12 @@
       "days_left": null
     },
     {
-      "title": "제40회 충남 산업디자인 대전 디자이너 모집신규",
-      "organization": "충청남도",
-      "category": "UI/UX",
+      "title": "제29회 우리은행 미술대회 (우리 아트콘)신규",
+      "organization": "우리은행",
+      "category": "기타IT",
       "source_site": "wevity",
       "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111379",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111411",
       "deadline": null,
       "days_left": null
     }
