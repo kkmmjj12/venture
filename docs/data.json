@@ -1,5 +1,5 @@
 {
-  "updated": "2026.10.02 03:51 UTC",
+  "updated": "2026.10.03 03:36 UTC",
   "total": 15,
   "contests": [
     {
@@ -19,26 +19,6 @@
       "source_site": "wevity",
       "source_label": "위비티",
       "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111311",
-      "deadline": null,
-      "days_left": null
-    },
-    {
-      "title": "스파크업 : 모두의 에너지 (에너지 창업 경연대회)SPECIAL",
-      "organization": "기후에너지환경부",
-      "category": "기타IT",
-      "source_site": "wevity",
-      "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111148",
-      "deadline": null,
-      "days_left": null
-    },
-    {
-      "title": "(4주) 신춘문예 작가님에게 글쓰기를 배워보세요! 참여자 모집 중SPECIAL",
-      "organization": "작필(作筆)",
-      "category": "기타IT",
-      "source_site": "wevity",
-      "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111114",
       "deadline": null,
       "days_left": null
     },
@@ -83,6 +63,46 @@
       "days_left": null
     },
     {
+      "title": "2026 DATA·AI 분석 경진대회SPECIAL",
+      "organization": "한국과학기술정보연구원",
+      "category": "AI/머신러닝",
+      "source_site": "wevity",
+      "source_label": "위비티",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=110023",
+      "deadline": null,
+      "days_left": null
+    },
+    {
+      "title": "제4회 현대문학x미래엔 청소년문학상 공모전SPECIAL",
+      "organization": "현대문학, 미래엔",
+      "category": "기타IT",
+      "source_site": "wevity",
+      "source_label": "위비티",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=109996",
+      "deadline": null,
+      "days_left": null
+    },
+    {
+      "title": "제14회 한옥디자인 국제 공모전SPECIAL",
+      "organization": "사단법인 한옥건축학회",
+      "category": "UI/UX",
+      "source_site": "wevity",
+      "source_label": "위비티",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=109966",
+      "deadline": null,
+      "days_left": null
+    },
+    {
+      "title": "[사회복지공동모금회 나눔문화연구소] 제8회 사랑의열매 학술연구지원 공모SPECIAL",
+      "organization": "사회복지공동모금회 사랑의열매",
+      "category": "기타IT",
+      "source_site": "wevity",
+      "source_label": "위비티",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=109936",
+      "deadline": null,
+      "days_left": null
+    },
+    {
       "title": "2026 디자인 크리에이션 챌린지(DCC) 3D프린팅 제품디자인 공모전SPECIAL",
       "organization": "단국대-스트라타시스 첨단제조융합연구센터",
       "category": "UI/UX",
@@ -99,26 +119,6 @@
       "source_site": "wevity",
       "source_label": "위비티",
       "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=108562",
-      "deadline": null,
-      "days_left": null
-    },
-    {
-      "title": "2026년 국민체육진흥공단 공공데이터 활용 경진대회SPECIAL",
-      "organization": "국민체육진흥공단",
-      "category": "데이터",
-      "source_site": "wevity",
-      "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=108240",
-      "deadline": null,
-      "days_left": null
-    },
-    {
-      "title": "2026년 디지털윤리 창작콘텐츠 공모전SPECIAL",
-      "organization": "방송미디어통신위원회",
-      "category": "기타IT",
-      "source_site": "wevity",
-      "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=107830",
       "deadline": null,
       "days_left": null
     },
@@ -143,12 +143,12 @@
       "days_left": null
     },
     {
-      "title": "제29회 우리은행 미술대회 (우리 아트콘)신규",
-      "organization": "우리은행",
-      "category": "기타IT",
+      "title": "롯데몰 벨리타운 청량리 - AI 뮤직 공모전신규",
+      "organization": "롯데백화점",
+      "category": "AI/머신러닝",
       "source_site": "wevity",
       "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111411",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111455",
       "deadline": null,
       "days_left": null
     }
