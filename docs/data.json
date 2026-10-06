@@ -1,5 +1,5 @@
 {
-  "updated": "2026.10.05 03:50 UTC",
+  "updated": "2026.10.06 04:38 UTC",
   "total": 15,
   "contests": [
     {
@@ -143,12 +143,12 @@
       "days_left": null
     },
     {
-      "title": "롯데몰 벨리타운 청량리 - AI 뮤직 공모전",
-      "organization": "롯데백화점",
-      "category": "AI/머신러닝",
+      "title": "2026년 도시정책 시민계획단 및 청소년계획단 모집",
+      "organization": "수원시 도시계획과",
+      "category": "기타IT",
       "source_site": "wevity",
       "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111455",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111464",
       "deadline": null,
       "days_left": null
     }
