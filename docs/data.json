@@ -1,5 +1,5 @@
 {
-  "updated": "2026.10.06 04:38 UTC",
+  "updated": "2026.10.07 04:04 UTC",
   "total": 15,
   "contests": [
     {
@@ -19,16 +19,6 @@
       "source_site": "wevity",
       "source_label": "위비티",
       "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111311",
-      "deadline": null,
-      "days_left": null
-    },
-    {
-      "title": "2026년 스포츠토토 숏폼 공모전SPECIAL",
-      "organization": "국민체육진흥공단",
-      "category": "기타IT",
-      "source_site": "wevity",
-      "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=110678",
       "deadline": null,
       "days_left": null
     },
@@ -143,12 +133,22 @@
       "days_left": null
     },
     {
-      "title": "2026년 도시정책 시민계획단 및 청소년계획단 모집",
-      "organization": "수원시 도시계획과",
+      "title": "제20회 전북청소년영화제신규",
+      "organization": "전북청소년영화제",
       "category": "기타IT",
       "source_site": "wevity",
       "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111464",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111508",
+      "deadline": null,
+      "days_left": null
+    },
+    {
+      "title": "2026년 2차 외국발 허위정보 대응 대학생 아이디어 공모전신규",
+      "organization": "한국과학기술원(KAIST)",
+      "category": "기타IT",
+      "source_site": "wevity",
+      "source_label": "위비티",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111506",
       "deadline": null,
       "days_left": null
     }
