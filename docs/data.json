@@ -1,7 +1,17 @@
 {
-  "updated": "2026.10.08 04:16 UTC",
+  "updated": "2026.10.09 04:21 UTC",
   "total": 15,
   "contests": [
+    {
+      "title": "미래에셋금융서비스 TAMS 글로벌금융인양성과정 17기 모집신규SPECIAL",
+      "organization": "미래에셋금융서비스",
+      "category": "기타IT",
+      "source_site": "wevity",
+      "source_label": "위비티",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111546",
+      "deadline": null,
+      "days_left": null
+    },
     {
       "title": "2026 한국외식산업연구원 외식경영스타 아이디어 공모전SPECIAL",
       "organization": "한국외식산업연구원",
@@ -123,32 +133,22 @@
       "days_left": null
     },
     {
-      "title": "2026 외국인 창업대전(OASIS-6) 참가자 모집신규",
-      "organization": "법무부",
+      "title": "[OPERA] 오페라 7기 서포터즈 모집신규",
+      "organization": "피아스 코리아",
       "category": "기타IT",
       "source_site": "wevity",
       "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111534",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111555",
       "deadline": null,
       "days_left": null
     },
     {
-      "title": "[러블리페이퍼] 손수레 정비봉사단 러블리페어 모집신규",
-      "organization": "사단법인 러블리페이퍼",
-      "category": "기타IT",
+      "title": "제7회 하이라이트TV AI 공모전신규",
+      "organization": "하이라이트TV",
+      "category": "AI/머신러닝",
       "source_site": "wevity",
       "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111533",
-      "deadline": null,
-      "days_left": null
-    },
-    {
-      "title": "2026 광주콘텐츠코리아랩 웹소설 원천 스토리 공모전신규",
-      "organization": "광주정보문화산업진흥원",
-      "category": "웹개발",
-      "source_site": "wevity",
-      "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111531",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111553",
       "deadline": null,
       "days_left": null
     }
