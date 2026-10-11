@@ -1,5 +1,5 @@
 {
-  "updated": "2026.10.10 04:07 UTC",
+  "updated": "2026.10.11 03:43 UTC",
   "total": 15,
   "contests": [
     {
@@ -133,22 +133,22 @@
       "days_left": null
     },
     {
+      "title": "용인어린이상상의숲 상상 아트마켓 참여 예술가 공모",
+      "organization": "용인문화재단",
+      "category": "기타IT",
+      "source_site": "wevity",
+      "source_label": "위비티",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111563",
+      "deadline": null,
+      "days_left": null
+    },
+    {
       "title": "[OPERA] 오페라 7기 서포터즈 모집",
       "organization": "피아스 코리아",
       "category": "기타IT",
       "source_site": "wevity",
       "source_label": "위비티",
       "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111555",
-      "deadline": null,
-      "days_left": null
-    },
-    {
-      "title": "제7회 하이라이트TV AI 공모전",
-      "organization": "하이라이트TV",
-      "category": "AI/머신러닝",
-      "source_site": "wevity",
-      "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111553",
       "deadline": null,
       "days_left": null
     }
