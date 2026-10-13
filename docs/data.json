@@ -1,7 +1,27 @@
 {
-  "updated": "2026.10.12 04:06 UTC",
+  "updated": "2026.10.13 05:15 UTC",
   "total": 15,
   "contests": [
+    {
+      "title": "[건강보험심사평가원] 우리 동네 병원과 가까워지는 한마디 슬로건 공모전신규SPECIAL",
+      "organization": "건강보험심사평가원",
+      "category": "기타IT",
+      "source_site": "wevity",
+      "source_label": "위비티",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111612",
+      "deadline": null,
+      "days_left": null
+    },
+    {
+      "title": "(4주) 신춘문예 작가님에게 글쓰기를 배워보세요! 참여자 모집 중신규SPECIAL",
+      "organization": "작필(作筆)",
+      "category": "기타IT",
+      "source_site": "wevity",
+      "source_label": "위비티",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111610",
+      "deadline": null,
+      "days_left": null
+    },
     {
       "title": "미래에셋금융서비스 TAMS 글로벌금융인양성과정 17기 모집SPECIAL",
       "organization": "미래에셋금융서비스",
@@ -129,26 +149,6 @@
       "source_site": "wevity",
       "source_label": "위비티",
       "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=104715",
-      "deadline": null,
-      "days_left": null
-    },
-    {
-      "title": "2026 연연지회 청소년 문화 경연대회 참가자 모집신규",
-      "organization": "삼각산 도선사",
-      "category": "기타IT",
-      "source_site": "wevity",
-      "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111578",
-      "deadline": null,
-      "days_left": null
-    },
-    {
-      "title": "2026년 제 5회 한티가는길 사진공모전신규",
-      "organization": "사단법인 한티",
-      "category": "기타IT",
-      "source_site": "wevity",
-      "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111575",
       "deadline": null,
       "days_left": null
     }
