@@ -1,9 +1,19 @@
 {
-  "updated": "2026.10.13 05:15 UTC",
+  "updated": "2026.10.14 03:20 UTC",
   "total": 15,
   "contests": [
     {
-      "title": "[건강보험심사평가원] 우리 동네 병원과 가까워지는 한마디 슬로건 공모전신규SPECIAL",
+      "title": "2026 신한 스퀘어브릿지 대학생 창업 공모전 HERO IR신규SPECIAL",
+      "organization": "신한금융그룹, 신한금융희망재단",
+      "category": "기타IT",
+      "source_site": "wevity",
+      "source_label": "위비티",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111647",
+      "deadline": null,
+      "days_left": null
+    },
+    {
+      "title": "[건강보험심사평가원] 우리 동네 병원과 가까워지는 한마디 슬로건 공모전SPECIAL",
       "organization": "건강보험심사평가원",
       "category": "기타IT",
       "source_site": "wevity",
@@ -13,7 +23,7 @@
       "days_left": null
     },
     {
-      "title": "(4주) 신춘문예 작가님에게 글쓰기를 배워보세요! 참여자 모집 중신규SPECIAL",
+      "title": "(4주) 신춘문예 작가님에게 글쓰기를 배워보세요! 참여자 모집 중SPECIAL",
       "organization": "작필(作筆)",
       "category": "기타IT",
       "source_site": "wevity",
@@ -123,32 +133,22 @@
       "days_left": null
     },
     {
-      "title": "제38회 대한민국 실내건축대전SPECIAL",
-      "organization": "(사)한국실내건축가협회(KOSID), KCC글라스·홈씨씨",
-      "category": "기타IT",
-      "source_site": "wevity",
-      "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=108562",
-      "deadline": null,
-      "days_left": null
-    },
-    {
-      "title": "2026년 템플스테이·사찰음식·불교문화 콘텐츠 논문공모전SPECIAL",
-      "organization": "한국불교문화사업단",
-      "category": "기타IT",
-      "source_site": "wevity",
-      "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=107265",
-      "deadline": null,
-      "days_left": null
-    },
-    {
       "title": "2026 제4회 충청남도 드론 영상 및 사진 공모전SPECIAL",
       "organization": "충청남도",
       "category": "기타IT",
       "source_site": "wevity",
       "source_label": "위비티",
       "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=104715",
+      "deadline": null,
+      "days_left": null
+    },
+    {
+      "title": "제4회 춘천 한 문장 봄내글판 전국 공모전신규",
+      "organization": "춘천시 홍보담당관",
+      "category": "기타IT",
+      "source_site": "wevity",
+      "source_label": "위비티",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111644",
       "deadline": null,
       "days_left": null
     }
