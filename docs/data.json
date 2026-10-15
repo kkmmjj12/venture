@@ -1,9 +1,19 @@
 {
-  "updated": "2026.10.14 03:20 UTC",
+  "updated": "2026.10.15 02:59 UTC",
   "total": 15,
   "contests": [
     {
-      "title": "2026 신한 스퀘어브릿지 대학생 창업 공모전 HERO IR신규SPECIAL",
+      "title": "2026 화성특례시 AI CF 공모전 - 제6회 별별화성 Awards신규SPECIAL",
+      "organization": "화성특례시",
+      "category": "AI/머신러닝",
+      "source_site": "wevity",
+      "source_label": "위비티",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111674",
+      "deadline": null,
+      "days_left": null
+    },
+    {
+      "title": "2026 신한 스퀘어브릿지 대학생 창업 공모전 HERO IRSPECIAL",
       "organization": "신한금융그룹, 신한금융희망재단",
       "category": "기타IT",
       "source_site": "wevity",
@@ -139,16 +149,6 @@
       "source_site": "wevity",
       "source_label": "위비티",
       "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=104715",
-      "deadline": null,
-      "days_left": null
-    },
-    {
-      "title": "제4회 춘천 한 문장 봄내글판 전국 공모전신규",
-      "organization": "춘천시 홍보담당관",
-      "category": "기타IT",
-      "source_site": "wevity",
-      "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111644",
       "deadline": null,
       "days_left": null
     }
