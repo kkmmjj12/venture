@@ -1,5 +1,5 @@
 {
-  "updated": "2026.10.17 02:48 UTC",
+  "updated": "2026.10.18 02:49 UTC",
   "total": 15,
   "contests": [
     {
@@ -73,16 +73,6 @@
       "days_left": null
     },
     {
-      "title": "2026 0924영상제 영상 공모전SPECIALIDEA",
-      "organization": "하남시청소년수련관",
-      "category": "기타IT",
-      "source_site": "wevity",
-      "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=110585",
-      "deadline": null,
-      "days_left": null
-    },
-    {
       "title": "7th Da-Ho Award Asian International Short Film Competition(단편영화 공모전)SPECIALIDEA",
       "organization": "Da-Ho Construction Co., Ltd.",
       "category": "게임/VR",
@@ -149,6 +139,16 @@
       "source_site": "wevity",
       "source_label": "위비티",
       "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=104715",
+      "deadline": null,
+      "days_left": null
+    },
+    {
+      "title": "한국소통학회 주최 제1회 전국대학생 토론대회",
+      "organization": "한국소통학회/NS홈쇼핑",
+      "category": "기타IT",
+      "source_site": "wevity",
+      "source_label": "위비티",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111731",
       "deadline": null,
       "days_left": null
     }
