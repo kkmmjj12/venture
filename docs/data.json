@@ -1,7 +1,17 @@
 {
-  "updated": "2026.10.18 02:49 UTC",
+  "updated": "2026.10.19 03:02 UTC",
   "total": 15,
   "contests": [
+    {
+      "title": "션샤인 TIME TRAVEL 숏폼 영상 공모전신규SPECIAL",
+      "organization": "SBS A&T",
+      "category": "기타IT",
+      "source_site": "wevity",
+      "source_label": "위비티",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111750",
+      "deadline": null,
+      "days_left": null
+    },
     {
       "title": "2026 화성특례시 AI CF 공모전 - 제6회 별별화성 AwardsSPECIAL",
       "organization": "화성특례시",
@@ -59,16 +69,6 @@
       "source_site": "wevity",
       "source_label": "위비티",
       "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111378",
-      "deadline": null,
-      "days_left": null
-    },
-    {
-      "title": "LG 대국민 미소 사진 공모전 - 스마일 모먼트SPECIALIDEA",
-      "organization": "LG",
-      "category": "기타IT",
-      "source_site": "wevity",
-      "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111311",
       "deadline": null,
       "days_left": null
     },
@@ -143,12 +143,12 @@
       "days_left": null
     },
     {
-      "title": "한국소통학회 주최 제1회 전국대학생 토론대회",
-      "organization": "한국소통학회/NS홈쇼핑",
+      "title": "제1회 꿈꾸미닷컴 꿈 수필 공모전",
+      "organization": "꿈꾸미닷컴",
       "category": "기타IT",
       "source_site": "wevity",
       "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111731",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111739",
       "deadline": null,
       "days_left": null
     }
