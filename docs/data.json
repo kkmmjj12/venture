@@ -1,9 +1,19 @@
 {
-  "updated": "2026.10.19 03:02 UTC",
+  "updated": "2026.10.20 03:12 UTC",
   "total": 15,
   "contests": [
     {
-      "title": "션샤인 TIME TRAVEL 숏폼 영상 공모전신규SPECIAL",
+      "title": "2026 대경권 캠퍼스 IR 챔피언십 (창업 공모전)신규SPECIAL",
+      "organization": "(주)포항연합기술지주",
+      "category": "기타IT",
+      "source_site": "wevity",
+      "source_label": "위비티",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111768",
+      "deadline": null,
+      "days_left": null
+    },
+    {
+      "title": "션샤인 TIME TRAVEL 숏폼 영상 공모전SPECIAL",
       "organization": "SBS A&T",
       "category": "기타IT",
       "source_site": "wevity",
@@ -139,16 +149,6 @@
       "source_site": "wevity",
       "source_label": "위비티",
       "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=104715",
-      "deadline": null,
-      "days_left": null
-    },
-    {
-      "title": "제1회 꿈꾸미닷컴 꿈 수필 공모전",
-      "organization": "꿈꾸미닷컴",
-      "category": "기타IT",
-      "source_site": "wevity",
-      "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111739",
       "deadline": null,
       "days_left": null
     }
