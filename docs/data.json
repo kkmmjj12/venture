@@ -1,9 +1,19 @@
 {
-  "updated": "2026.10.20 03:12 UTC",
+  "updated": "2026.10.21 03:07 UTC",
   "total": 15,
   "contests": [
     {
-      "title": "2026 대경권 캠퍼스 IR 챔피언십 (창업 공모전)신규SPECIAL",
+      "title": "공모전 준비 중이라면? AI 교정 서비스 [교정의 신]과 함께!신규SPECIAL",
+      "organization": "교정의 신",
+      "category": "AI/머신러닝",
+      "source_site": "wevity",
+      "source_label": "위비티",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111812",
+      "deadline": null,
+      "days_left": null
+    },
+    {
+      "title": "2026 대경권 캠퍼스 IR 챔피언십 (창업 공모전)SPECIAL",
       "organization": "(주)포항연합기술지주",
       "category": "기타IT",
       "source_site": "wevity",
@@ -33,7 +43,7 @@
       "days_left": null
     },
     {
-      "title": "2026 신한 스퀘어브릿지 대학생 창업 공모전 HERO IRSPECIAL",
+      "title": "2026 신한 스퀘어브릿지 대학생 창업 공모전 HERO IRSPECIALIDEA",
       "organization": "신한금융그룹, 신한금융희망재단",
       "category": "기타IT",
       "source_site": "wevity",
@@ -139,16 +149,6 @@
       "source_site": "wevity",
       "source_label": "위비티",
       "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=109516",
-      "deadline": null,
-      "days_left": null
-    },
-    {
-      "title": "2026 제4회 충청남도 드론 영상 및 사진 공모전SPECIAL",
-      "organization": "충청남도",
-      "category": "기타IT",
-      "source_site": "wevity",
-      "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=104715",
       "deadline": null,
       "days_left": null
     }
