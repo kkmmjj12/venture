@@ -1,7 +1,17 @@
 {
-  "updated": "2026.10.23 03:10 UTC",
+  "updated": "2026.10.24 03:05 UTC",
   "total": 15,
   "contests": [
+    {
+      "title": "한층 업그레이드된 책쓰기 프로젝트 59기 모집｜1인1권 출간보장/6주과정/인세지급신규SPECIAL",
+      "organization": "글ego",
+      "category": "기타IT",
+      "source_site": "wevity",
+      "source_label": "위비티",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111881",
+      "deadline": null,
+      "days_left": null
+    },
     {
       "title": "공모전 준비 중이라면? AI 교정 서비스 [교정의 신]과 함께!SPECIAL",
       "organization": "교정의 신",
@@ -129,16 +139,6 @@
       "source_site": "wevity",
       "source_label": "위비티",
       "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=109966",
-      "deadline": null,
-      "days_left": null
-    },
-    {
-      "title": "[사회복지공동모금회 나눔문화연구소] 제8회 사랑의열매 학술연구지원 공모SPECIAL",
-      "organization": "사회복지공동모금회 사랑의열매",
-      "category": "기타IT",
-      "source_site": "wevity",
-      "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=109936",
       "deadline": null,
       "days_left": null
     },
