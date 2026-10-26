@@ -1,7 +1,17 @@
 {
-  "updated": "2026.10.25 02:59 UTC",
+  "updated": "2026.10.26 02:58 UTC",
   "total": 15,
   "contests": [
+    {
+      "title": "농업가치 확산을 위한 농심천심 대학(원)생 논문 공모전신규SPECIAL",
+      "organization": "농업협동조합중앙회",
+      "category": "기타IT",
+      "source_site": "wevity",
+      "source_label": "위비티",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111899",
+      "deadline": null,
+      "days_left": null
+    },
     {
       "title": "한층 업그레이드된 책쓰기 프로젝트 59기 모집｜1인1권 출간보장/6주과정/인세지급SPECIAL",
       "organization": "글ego",
@@ -39,16 +49,6 @@
       "source_site": "wevity",
       "source_label": "위비티",
       "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111750",
-      "deadline": null,
-      "days_left": null
-    },
-    {
-      "title": "2026 화성특례시 AI CF 공모전 - 제6회 별별화성 AwardsSPECIAL",
-      "organization": "화성특례시",
-      "category": "AI/머신러닝",
-      "source_site": "wevity",
-      "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111674",
       "deadline": null,
       "days_left": null
     },
