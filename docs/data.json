@@ -1,9 +1,9 @@
 {
-  "updated": "2026.10.26 02:58 UTC",
+  "updated": "2026.10.27 03:31 UTC",
   "total": 15,
   "contests": [
     {
-      "title": "농업가치 확산을 위한 농심천심 대학(원)생 논문 공모전신규SPECIAL",
+      "title": "농업가치 확산을 위한 농심천심 대학(원)생 논문 공모전SPECIAL",
       "organization": "농업협동조합중앙회",
       "category": "기타IT",
       "source_site": "wevity",
@@ -69,16 +69,6 @@
       "source_site": "wevity",
       "source_label": "위비티",
       "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111612",
-      "deadline": null,
-      "days_left": null
-    },
-    {
-      "title": "(4주) 신춘문예 작가님에게 글쓰기를 배워보세요! 참여자 모집 중SPECIAL",
-      "organization": "작필(作筆)",
-      "category": "기타IT",
-      "source_site": "wevity",
-      "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111610",
       "deadline": null,
       "days_left": null
     },
@@ -149,6 +139,16 @@
       "source_site": "wevity",
       "source_label": "위비티",
       "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=109516",
+      "deadline": null,
+      "days_left": null
+    },
+    {
+      "title": "2026 힐로웨이브 아트 프로젝트 (결을 읽는 사람들) 참여 작가 공모신규",
+      "organization": "힐로웨이브",
+      "category": "기타IT",
+      "source_site": "wevity",
+      "source_label": "위비티",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111937",
       "deadline": null,
       "days_left": null
     }
