@@ -1,9 +1,29 @@
 {
-  "updated": "2026.11.01 04:03 UTC",
+  "updated": "2026.11.02 04:07 UTC",
   "total": 15,
   "contests": [
     {
-      "title": "농업가치 확산을 위한 농심천심 대학(원)생 논문 공모전SPECIAL",
+      "title": "[제3회] 매경 AI 광고 공모전 대한민국 AI 광고대상신규SPECIAL",
+      "organization": "매경미디어",
+      "category": "AI/머신러닝",
+      "source_site": "wevity",
+      "source_label": "위비티",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=112073",
+      "deadline": null,
+      "days_left": null
+    },
+    {
+      "title": "건강보험심사평가원 광고 온에어 기념 이벤트SPECIAL",
+      "organization": "건강보험심사평가원",
+      "category": "기타IT",
+      "source_site": "wevity",
+      "source_label": "위비티",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=112063",
+      "deadline": null,
+      "days_left": null
+    },
+    {
+      "title": "농업가치 확산을 위한 농심천심 대학(원)생 논문 공모전SPECIALIDEA",
       "organization": "농업협동조합중앙회",
       "category": "기타IT",
       "source_site": "wevity",
@@ -33,7 +53,7 @@
       "days_left": null
     },
     {
-      "title": "2026 대경권 캠퍼스 IR 챔피언십 (창업 공모전)SPECIAL",
+      "title": "2026 대경권 캠퍼스 IR 챔피언십 (창업 공모전)SPECIALIDEA",
       "organization": "(주)포항연합기술지주",
       "category": "기타IT",
       "source_site": "wevity",
@@ -59,16 +79,6 @@
       "source_site": "wevity",
       "source_label": "위비티",
       "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111647",
-      "deadline": null,
-      "days_left": null
-    },
-    {
-      "title": "[건강보험심사평가원] 우리 동네 병원과 가까워지는 한마디 슬로건 공모전SPECIALIDEA",
-      "organization": "건강보험심사평가원",
-      "category": "기타IT",
-      "source_site": "wevity",
-      "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111612",
       "deadline": null,
       "days_left": null
     },
@@ -133,22 +143,12 @@
       "days_left": null
     },
     {
-      "title": "2026 디자인 크리에이션 챌린지(DCC) 3D프린팅 제품디자인 공모전SPECIAL",
-      "organization": "단국대-스트라타시스 첨단제조융합연구센터",
-      "category": "UI/UX",
-      "source_site": "wevity",
-      "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=109516",
-      "deadline": null,
-      "days_left": null
-    },
-    {
-      "title": "이번 11월 부여 어때 숏폼 공모전",
-      "organization": "부여군청",
+      "title": "새만금환경생태단지 가을 숏폼 공모전신규",
+      "organization": "국립공원공단 새만금환경생태단지관리단",
       "category": "기타IT",
       "source_site": "wevity",
       "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=112044",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=112069",
       "deadline": null,
       "days_left": null
     }
