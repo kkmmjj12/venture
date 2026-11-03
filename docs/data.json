@@ -1,9 +1,9 @@
 {
-  "updated": "2026.11.02 04:07 UTC",
+  "updated": "2026.11.03 05:08 UTC",
   "total": 15,
   "contests": [
     {
-      "title": "[제3회] 매경 AI 광고 공모전 대한민국 AI 광고대상신규SPECIAL",
+      "title": "[제3회] 매경 AI 광고 공모전 대한민국 AI 광고대상SPECIAL",
       "organization": "매경미디어",
       "category": "AI/머신러닝",
       "source_site": "wevity",
@@ -73,16 +73,6 @@
       "days_left": null
     },
     {
-      "title": "2026 신한 스퀘어브릿지 대학생 창업 공모전 HERO IRSPECIALIDEA",
-      "organization": "신한금융그룹, 신한금융희망재단",
-      "category": "기타IT",
-      "source_site": "wevity",
-      "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111647",
-      "deadline": null,
-      "days_left": null
-    },
-    {
       "title": "미래에셋금융서비스 TAMS 글로벌금융인양성과정 17기 모집SPECIAL",
       "organization": "미래에셋금융서비스",
       "category": "기타IT",
@@ -93,12 +83,22 @@
       "days_left": null
     },
     {
-      "title": "2026 한국외식산업연구원 외식경영스타 아이디어 공모전SPECIAL",
-      "organization": "한국외식산업연구원",
+      "title": "2026 대한건축사협회 대학(원)생 모듈러건축 공모전SPECIAL",
+      "organization": "대한건축사협회",
       "category": "기타IT",
       "source_site": "wevity",
       "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111378",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=110885",
+      "deadline": null,
+      "days_left": null
+    },
+    {
+      "title": "2026 제1회 KIBE 융합디자인 공모전SPECIAL",
+      "organization": "(사)한국녹색플랜연구원",
+      "category": "UI/UX",
+      "source_site": "wevity",
+      "source_label": "위비티",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=110826",
       "deadline": null,
       "days_left": null
     },
@@ -143,12 +143,12 @@
       "days_left": null
     },
     {
-      "title": "새만금환경생태단지 가을 숏폼 공모전신규",
-      "organization": "국립공원공단 새만금환경생태단지관리단",
+      "title": "2026 PAC 공모전신규",
+      "organization": "숙명여자대학교 홍보광고학과",
       "category": "기타IT",
       "source_site": "wevity",
       "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=112069",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=112110",
       "deadline": null,
       "days_left": null
     }
