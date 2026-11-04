@@ -1,5 +1,5 @@
 {
-  "updated": "2026.11.03 05:08 UTC",
+  "updated": "2026.11.04 04:39 UTC",
   "total": 15,
   "contests": [
     {
@@ -143,12 +143,12 @@
       "days_left": null
     },
     {
-      "title": "2026 PAC 공모전신규",
-      "organization": "숙명여자대학교 홍보광고학과",
-      "category": "기타IT",
+      "title": "제1회 CLIIP AI 웹툰 영상화 공모전신규",
+      "organization": "시원아트",
+      "category": "AI/머신러닝",
       "source_site": "wevity",
       "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=112110",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=112142",
       "deadline": null,
       "days_left": null
     }
