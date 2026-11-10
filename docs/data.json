@@ -1,5 +1,5 @@
 {
-  "updated": "2026.11.09 04:24 UTC",
+  "updated": "2026.11.10 05:47 UTC",
   "total": 15,
   "contests": [
     {
@@ -59,16 +59,6 @@
       "source_site": "wevity",
       "source_label": "위비티",
       "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111750",
-      "deadline": null,
-      "days_left": null
-    },
-    {
-      "title": "미래에셋금융서비스 TAMS 글로벌금융인양성과정 17기 모집SPECIAL",
-      "organization": "미래에셋금융서비스",
-      "category": "기타IT",
-      "source_site": "wevity",
-      "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111546",
       "deadline": null,
       "days_left": null
     },
@@ -133,22 +123,32 @@
       "days_left": null
     },
     {
-      "title": "난치병 아동의 소원천사 42기 위시엔젤 모집신규",
-      "organization": "메이크어위시 코리아",
+      "title": "2026 아주경제 국방방산포럼 서포터즈 모집신규",
+      "organization": "아주경제, 한국방위산업진흥회, 전북대학교",
       "category": "기타IT",
       "source_site": "wevity",
       "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=112241",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=112275",
       "deadline": null,
       "days_left": null
     },
     {
-      "title": "제1회 ALONA 웹소설 공모전신규",
-      "organization": "알로나",
-      "category": "웹개발",
+      "title": "전남광주통합특별시의회 정책아이디어 공모전신규",
+      "organization": "전남광주통합특별시의회사무처",
+      "category": "기타IT",
       "source_site": "wevity",
       "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=112240",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=112270",
+      "deadline": null,
+      "days_left": null
+    },
+    {
+      "title": "광명역 미래비전 AI 영상 공모전신규",
+      "organization": "광명시",
+      "category": "AI/머신러닝",
+      "source_site": "wevity",
+      "source_label": "위비티",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=112266",
       "deadline": null,
       "days_left": null
     }
