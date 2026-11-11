@@ -1,5 +1,5 @@
 {
-  "updated": "2026.11.10 05:47 UTC",
+  "updated": "2026.11.11 04:29 UTC",
   "total": 15,
   "contests": [
     {
@@ -29,6 +29,26 @@
       "source_site": "wevity",
       "source_label": "위비티",
       "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111899",
+      "deadline": null,
+      "days_left": null
+    },
+    {
+      "title": "제5회 한국여성작가 회화공모전 & K-WOMEN IN PARISSPECIAL",
+      "organization": "여성신문 / (사)여성문화네트워크",
+      "category": "게임/VR",
+      "source_site": "wevity",
+      "source_label": "위비티",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111880",
+      "deadline": null,
+      "days_left": null
+    },
+    {
+      "title": "제1회 중앙일보 어린이 미술대회SPECIAL",
+      "organization": "중앙일보",
+      "category": "기타IT",
+      "source_site": "wevity",
+      "source_label": "위비티",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111838",
       "deadline": null,
       "days_left": null
     },
@@ -93,16 +113,6 @@
       "days_left": null
     },
     {
-      "title": "2026 DATA·AI 분석 경진대회SPECIAL",
-      "organization": "한국과학기술정보연구원",
-      "category": "AI/머신러닝",
-      "source_site": "wevity",
-      "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=110023",
-      "deadline": null,
-      "days_left": null
-    },
-    {
       "title": "제4회 현대문학x미래엔 청소년문학상 공모전SPECIAL",
       "organization": "현대문학, 미래엔",
       "category": "기타IT",
@@ -123,32 +133,22 @@
       "days_left": null
     },
     {
-      "title": "2026 아주경제 국방방산포럼 서포터즈 모집신규",
-      "organization": "아주경제, 한국방위산업진흥회, 전북대학교",
+      "title": "2026 김천 삼색이수자율상권 유튜브 공모전신규",
+      "organization": "삼색이수자율상권상인 협동조합",
       "category": "기타IT",
       "source_site": "wevity",
       "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=112275",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=112297",
       "deadline": null,
       "days_left": null
     },
     {
-      "title": "전남광주통합특별시의회 정책아이디어 공모전신규",
-      "organization": "전남광주통합특별시의회사무처",
-      "category": "기타IT",
-      "source_site": "wevity",
-      "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=112270",
-      "deadline": null,
-      "days_left": null
-    },
-    {
-      "title": "광명역 미래비전 AI 영상 공모전신규",
-      "organization": "광명시",
+      "title": "[부산과학기술대학교·KNN] 2026 부산 미래 직업·평생교육 AI 영상 공모전신규",
+      "organization": "부산과학기술대학교",
       "category": "AI/머신러닝",
       "source_site": "wevity",
       "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=112266",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=112295",
       "deadline": null,
       "days_left": null
     }
