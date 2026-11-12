@@ -1,5 +1,5 @@
 {
-  "updated": "2026.11.11 04:29 UTC",
+  "updated": "2026.11.12 05:34 UTC",
   "total": 15,
   "contests": [
     {
@@ -133,22 +133,22 @@
       "days_left": null
     },
     {
-      "title": "2026 김천 삼색이수자율상권 유튜브 공모전신규",
-      "organization": "삼색이수자율상권상인 협동조합",
-      "category": "기타IT",
+      "title": "쉽고 바른 정보통신기술(ICT) 공공언어 웹툰 공모전신규",
+      "organization": "문화체육관광부",
+      "category": "웹개발",
       "source_site": "wevity",
       "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=112297",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=112325",
       "deadline": null,
       "days_left": null
     },
     {
-      "title": "[부산과학기술대학교·KNN] 2026 부산 미래 직업·평생교육 AI 영상 공모전신규",
-      "organization": "부산과학기술대학교",
+      "title": "2026 SCENE AI·실사 숏드라마 공모전신규",
+      "organization": "씬(SCENE)",
       "category": "AI/머신러닝",
       "source_site": "wevity",
       "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=112295",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=112319",
       "deadline": null,
       "days_left": null
     }
