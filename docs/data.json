@@ -1,9 +1,9 @@
 {
-  "updated": "2026.11.13 04:51 UTC",
+  "updated": "2026.11.14 04:45 UTC",
   "total": 15,
   "contests": [
     {
-      "title": "농민신문 제31회 신춘문예 작품 공모신규SPECIAL",
+      "title": "농민신문 제31회 신춘문예 작품 공모SPECIAL",
       "organization": "농민신문",
       "category": "기타IT",
       "source_site": "wevity",
@@ -13,7 +13,7 @@
       "days_left": null
     },
     {
-      "title": "VIVID RE:PLAY 6개 IP로 만드는 AI영상 공모전신규SPECIAL",
+      "title": "VIVID RE:PLAY 6개 IP로 만드는 AI영상 공모전SPECIAL",
       "organization": "(주)아캐인",
       "category": "AI/머신러닝",
       "source_site": "wevity",
@@ -83,16 +83,6 @@
       "days_left": null
     },
     {
-      "title": "2026 대경권 캠퍼스 IR 챔피언십 (창업 공모전)SPECIALIDEA",
-      "organization": "(주)포항연합기술지주",
-      "category": "기타IT",
-      "source_site": "wevity",
-      "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=111768",
-      "deadline": null,
-      "days_left": null
-    },
-    {
       "title": "2026 대한건축사협회 대학(원)생 모듈러건축 공모전SPECIAL",
       "organization": "대한건축사협회",
       "category": "기타IT",
@@ -143,12 +133,22 @@
       "days_left": null
     },
     {
-      "title": "KMLACOP 2026신규",
-      "organization": "En_Siders",
+      "title": "제27회 전국국악동요경연대회신규",
+      "organization": "한국코다이협회ㅡ비영리전문예술법인",
       "category": "기타IT",
       "source_site": "wevity",
       "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=112339",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=112365",
+      "deadline": null,
+      "days_left": null
+    },
+    {
+      "title": "2026년 산림복지 국민제안 공모전신규",
+      "organization": "한국산림복지진흥원",
+      "category": "기타IT",
+      "source_site": "wevity",
+      "source_label": "위비티",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=112363",
       "deadline": null,
       "days_left": null
     }
