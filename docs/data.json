@@ -1,7 +1,17 @@
 {
-  "updated": "2026.11.15 04:36 UTC",
+  "updated": "2026.11.16 04:32 UTC",
   "total": 15,
   "contests": [
+    {
+      "title": "2027 Sunny Scholar 6기 모집 - Deep Dive into Social Problems신규SPECIAL",
+      "organization": "SK행복나눔재단",
+      "category": "게임/VR",
+      "source_site": "wevity",
+      "source_label": "위비티",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=112374",
+      "deadline": null,
+      "days_left": null
+    },
     {
       "title": "농민신문 제31회 신춘문예 작품 공모SPECIAL",
       "organization": "농민신문",
@@ -29,16 +39,6 @@
       "source_site": "wevity",
       "source_label": "위비티",
       "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=112073",
-      "deadline": null,
-      "days_left": null
-    },
-    {
-      "title": "건강보험심사평가원 광고 온에어 기념 이벤트SPECIAL",
-      "organization": "건강보험심사평가원",
-      "category": "기타IT",
-      "source_site": "wevity",
-      "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=112063",
       "deadline": null,
       "days_left": null
     },
