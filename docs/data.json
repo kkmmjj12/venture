@@ -1,9 +1,19 @@
 {
-  "updated": "2026.11.16 04:32 UTC",
+  "updated": "2026.11.17 06:18 UTC",
   "total": 15,
   "contests": [
     {
-      "title": "2027 Sunny Scholar 6기 모집 - Deep Dive into Social Problems신규SPECIAL",
+      "title": "(4주) 신춘문예 작가님에게 글쓰기를 배워보세요! 참여자 모집 중신규SPECIAL",
+      "organization": "작필(作筆)",
+      "category": "기타IT",
+      "source_site": "wevity",
+      "source_label": "위비티",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=112398",
+      "deadline": null,
+      "days_left": null
+    },
+    {
+      "title": "2027 Sunny Scholar 6기 모집 - Deep Dive into Social ProblemsSPECIAL",
       "organization": "SK행복나눔재단",
       "category": "게임/VR",
       "source_site": "wevity",
@@ -133,22 +143,12 @@
       "days_left": null
     },
     {
-      "title": "제27회 전국국악동요경연대회",
-      "organization": "한국코다이협회ㅡ비영리전문예술법인",
+      "title": "2026 ACC 윈터 페스타 자원봉사자 루돌프 모집신규",
+      "organization": "국립아시아문화전당(ACC)",
       "category": "기타IT",
       "source_site": "wevity",
       "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=112365",
-      "deadline": null,
-      "days_left": null
-    },
-    {
-      "title": "2026년 산림복지 국민제안 공모전",
-      "organization": "한국산림복지진흥원",
-      "category": "기타IT",
-      "source_site": "wevity",
-      "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=112363",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=112412",
       "deadline": null,
       "days_left": null
     }
