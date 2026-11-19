@@ -1,5 +1,5 @@
 {
-  "updated": "2026.11.18 05:44 UTC",
+  "updated": "2026.11.19 05:43 UTC",
   "total": 15,
   "contests": [
     {
@@ -23,7 +23,7 @@
       "days_left": null
     },
     {
-      "title": "농민신문 제31회 신춘문예 작품 공모SPECIAL",
+      "title": "농민신문 제31회 신춘문예 작품 공모SPECIALIDEA",
       "organization": "농민신문",
       "category": "기타IT",
       "source_site": "wevity",
@@ -43,7 +43,7 @@
       "days_left": null
     },
     {
-      "title": "[제3회] 매경 AI 광고 공모전 대한민국 AI 광고대상SPECIAL",
+      "title": "[제3회] 매경 AI 광고 공모전 대한민국 AI 광고대상SPECIALIDEA",
       "organization": "매경미디어",
       "category": "AI/머신러닝",
       "source_site": "wevity",
@@ -143,12 +143,12 @@
       "days_left": null
     },
     {
-      "title": "국회의원 김영환 청년명예보좌관 1기 모집신규",
-      "organization": "국회의원 김영환 의원실",
+      "title": "솔데스크 SAP 온라인 교육 영상 홍보 공모전신규",
+      "organization": "솔데스크",
       "category": "기타IT",
       "source_site": "wevity",
       "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=112434",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=112461",
       "deadline": null,
       "days_left": null
     }
