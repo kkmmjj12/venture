@@ -1,7 +1,17 @@
 {
-  "updated": "2026.11.25 06:47 UTC",
+  "updated": "2026.11.26 06:38 UTC",
   "total": 15,
   "contests": [
+    {
+      "title": "뉴테이크 AI 영상 공모전 - NEW TAKE ON AI신규SPECIAL",
+      "organization": "뉴테이크",
+      "category": "AI/머신러닝",
+      "source_site": "wevity",
+      "source_label": "위비티",
+      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=112589",
+      "deadline": null,
+      "days_left": null
+    },
     {
       "title": "(4주) 신춘문예 작가님에게 글쓰기를 배워보세요! 참여자 모집 중SPECIAL",
       "organization": "작필(作筆)",
@@ -139,16 +149,6 @@
       "source_site": "wevity",
       "source_label": "위비티",
       "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=109966",
-      "deadline": null,
-      "days_left": null
-    },
-    {
-      "title": "HJC 헬멧 그래픽 디자인 공모전 2026신규",
-      "organization": "(주) 에이치제이씨 (HJC Corporation)",
-      "category": "UI/UX",
-      "source_site": "wevity",
-      "source_label": "위비티",
-      "url": "https://www.wevity.com?c=find&s=1&gbn=view&gp=1&ix=112563",
       "deadline": null,
       "days_left": null
     }
